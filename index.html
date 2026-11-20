@@ -200,16 +200,19 @@
 </div>
 
 <script>
-  const TG_USER = 'твой_ник'; // Впиши сюда свой юзернейм в Telegram без знака @
+  const TG_USER = 'temaogg';
 
   document.querySelectorAll('.order-btn').forEach(btn => {
-    btn.addEventListener('click', (e) => {
+    const plan = btn.dataset.plan;
+    const text = encodeURIComponent(`Привет! Хочу обсудить запуск по тарифу: ${plan}`);
+    const url = `https://t.me{TG_USER}?text=${text}`;
+    btn.setAttribute('href', url);
+    btn.onclick = (e) => {
       e.preventDefault();
-      const plan = btn.dataset.plan;
-      const text = encodeURIComponent(`Привет! Хочу обсудить запуск по тарифу: ${plan}`);
-      window.open(`https://t.me{TG_USER}?text=${text}`, '_blank');
-    });
+      window.location.href = url;
+    };
   });
 </script>
 </body>
 </html>
+
