@@ -200,18 +200,13 @@
 </div>
 
 <script>
-  const TG_USER = 'temaogg';
-
-  document.querySelectorAll('.order-btn').forEach(btn => {
-    const plan = btn.dataset.plan;
-    const text = encodeURIComponent(`Привет! Хочу обсудить запуск по тарифу: ${plan}`);
-    const url = `https://t.me{TG_USER}?text=${text}`;
-    btn.setAttribute('href', url);
-    btn.onclick = (e) => {
-      e.preventDefault();
-      window.location.href = url;
-    };
-  });
+  var user = 'temaogg';
+  var btns = document.querySelectorAll('.order-btn');
+  for (var i = 0; i < btns.length; i++) {
+    var plan = btns[i].getAttribute('data-plan');
+    var url = 'https://t.me' + user + '?text=' + encodeURIComponent('Привет! Хочу обсудить запуск по тарифу: ' + plan);
+    btns[i].setAttribute('href', url);
+  }
 </script>
 </body>
 </html>
