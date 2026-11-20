@@ -91,40 +91,7 @@
     </div>
   </div>
 
-  <section id="cases">
-    <div class="sec-title">Реализованные проекты</div>
-    <div class="sec-sub">Готовые решения, адаптируемые под любую нишу за 24 часа</div>
-    <div class="grid-2">
-      <div class="card">
-        <div>
-          <span class="tag">Telegram Mini App</span>
-          <h3>Карманная касса для магазинов техники</h3>
-          <p>Закрытое приложение внутри Telegram для владельцев розницы и реселлеров (Apple, электроника, товарный бизнес).</p>
-          <ul class="feat-list">
-            <li>Калькулятор маржи (закупка в $, продажа в BYN/RUB)</li>
-            <li>Учет рассрочек, долгов и выполнение плана месяца</li>
-            <li>Вход по PIN-коду и выгрузка отчета за смену в 1 клик</li>
-          </ul>
-        </div>
-        <a href="#pricing" class="btn-card">Заказать под свой бизнес →</a>
-      </div>
-
-      <div class="card">
-        <div>
-          <span class="tag" style="color: var(--blue); background: rgba(0,122,255,0.12);">Web / Лендинг</span>
-          <h3>Продающий сайт для сферы услуг и студий</h3>
-          <p>Современный одностраничный сайт с высокой конверсией для барбершопов, детейлинга, бьюти-студий и локальных брендов.</p>
-          <ul class="feat-list">
-            <li>Адаптивный дизайн в стиле iOS / Dark Mode</li>
-            <li>Быстрая загрузка с телефона без тормозов</li>
-            <li>Прямая интеграция заявок в ваш Telegram</li>
-          </ul>
-        </div>
-        <a href="#pricing" class="btn-card">Заказать сайт →</a>
-      </div>
-    </div>
-  </section>
-  <section id="pricing">
+    <section id="pricing">
     <div class="sec-title">Форматы работы и цены</div>
     <div class="sec-sub">Платите один раз — пользуетесь постоянно, без скрытых подписок</div>
     <div class="grid-3">
@@ -140,7 +107,7 @@
             <li>Передача прав на бота на ваш аккаунт</li>
           </ul>
         </div>
-        <a href="#" class="btn-card order-btn" data-plan="Telegram-касса ($150)">Заказать кассу</a>
+        <a href="https://t.me" class="btn-card">Заказать кассу</a>
       </div>
 
       <div class="card price-card featured">
@@ -155,7 +122,7 @@
             <li>Бесплатный хостинг и помощь с запуском</li>
           </ul>
         </div>
-        <a href="#" class="btn-card order-btn" data-plan="Комплект: Сайт + Касса ($300)">Заказать комплект</a>
+        <a href="https://t.me" class="btn-card">Заказать комплект</a>
       </div>
 
       <div class="card price-card">
@@ -170,7 +137,7 @@
             <li>Кнопки быстрой связи в Telegram / WhatsApp</li>
           </ul>
         </div>
-        <a href="#" class="btn-card order-btn" data-plan="Продающий сайт ($200)">Заказать сайт</a>
+        <a href="https://t.me" class="btn-card">Заказать сайт</a>
       </div>
     </div>
   </section>
@@ -199,15 +166,6 @@
   </footer>
 </div>
 
-<script>
-  var user = 'temaogg';
-  var btns = document.querySelectorAll('.order-btn');
-  for (var i = 0; i < btns.length; i++) {
-    var plan = btns[i].getAttribute('data-plan');
-    var url = 'https://t.me' + user + '?text=' + encodeURIComponent('Привет! Хочу обсудить запуск по тарифу: ' + plan);
-    btns[i].setAttribute('href', url);
-  }
-</script>
 </body>
 </html>
 
